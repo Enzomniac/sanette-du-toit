@@ -1,0 +1,35 @@
+.transactions {
+    max-width: 600px;
+    margin: auto;
+}
+
+.transaction__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.transaction__client,
+.transaction__order {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+}
+
+.a-client-detail__title,
+.order__title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.a-client-detail,
+.an-order__detail {
+    margin-left: 0.5rem;
+}
+
+.a-client-detail + .a-client-detail,
+.an-order__detail + .an-order__detail {
+    margin-top: 0.5rem;
+}

@@ -1,0 +1,27 @@
+/*
+Theme Name: Artist's Portfolio
+Author: Richard Upton
+Version: 0.1
+*/
+
+@import "css_modules/reset.css";
+@import "css_modules/layout.css";
+@import "css_modules/theme.css";
+@import "css_modules/global.css";
+@import "css_modules/admin-bar.css";
+@import "css_modules/header.css";
+@import "css_modules/main.css";
+@import "css_modules/gallery.css";
+@import "css_modules/single-gallery.css";
+@import "css_modules/ap-blog.css";
+@import "css_modules/single-post.css";
+@import "css_modules/page.css";
+@import "css_modules/page-illustrations.css";
+@import "css_modules/contact.css";
+@import "css_modules/footer.css";
+@import "css_modules/404.css";
+@import "css_modules/cart.css";
+@import "css_modules/transactions.css";
+
+
+

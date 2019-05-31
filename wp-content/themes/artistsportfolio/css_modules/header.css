@@ -1,0 +1,156 @@
+
+
+header {
+    position: fixed;
+    /* top: 0; */
+    top: 0rem; /* DEV ENV ONLY */  
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.logo__title {
+    font-weight: bold;
+}
+
+nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    text-align: left;    
+    flex-direction: column;
+    padding: 1rem;
+    background: white;
+    width: 100%;
+    display: flex;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    font-size: 1.5rem;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle:checked ~ nav {
+    /* display: flex; */
+    transform: scale(1, 1);
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: black;
+    height: 3px;
+    width: 2rem;
+    border-radius: 1px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 8px;
+}
+
+.nav-toggle-label span::after {
+    top: 8px
+}
+
+.nav__item {
+    margin-bottom: 1rem;    
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;    
+    position: relative;
+}
+
+.nav__item:hover {
+    font-weight: bolder;
+    color: #77948F;
+}
+
+.nav-toggle:checked ~ nav .nav__item {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-toggle-label {
+        display: none
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(400px, 3fr) 1fr;        
+        align-items: center;
+    }
+
+    .logo-area {
+        grid-column: 2 / span 1;        
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3 / 4;        
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        font-size: 1.1rem;
+    }
+
+    .nav__item {
+        opacity: 1;
+        margin-bottom: 0;  
+    }
+
+    .nav__item + .nav__item {
+        margin-left: 1rem;
+    }
+
+    .nav__item::after {
+        content: "";
+        display: block;
+        height: 2px;
+        background: rgba(0, 0, 0, 0.3);
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    .nav__item:hover::after {
+        transform: scale(1, 1);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav__item + .nav__item {
+        margin-left: 2rem;
+    }
+}
+
+
+
+
+

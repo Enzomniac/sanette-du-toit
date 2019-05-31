@@ -1,0 +1,28 @@
+footer {
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.a-social-link {
+    margin: 0 2rem;
+    font-size: 2.5rem;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.facebook, .pinterest {
+    color: inherit;
+    transition: color 0.5s;
+}
+
+.facebook:hover {
+    color: rgba(0, 0, 255, 0.3);
+}
+
+.pinterest:hover {
+    color: rgba(255, 0, 0, 0.4);
+}
+

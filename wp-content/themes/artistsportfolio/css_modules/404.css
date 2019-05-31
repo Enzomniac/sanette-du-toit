@@ -1,0 +1,13 @@
+.page__404 {
+    text-align: center;
+}
+
+.page__404 > * {
+    margin: 2rem;
+}
+
+.page__404 li {
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

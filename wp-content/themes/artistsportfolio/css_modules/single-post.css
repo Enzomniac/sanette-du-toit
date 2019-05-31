@@ -1,0 +1,74 @@
+/* Uses much of the blog styling */
+
+.float-box {
+    display: none;    
+}
+
+.breadcrumb {
+    display: flex;    
+    justify-content: space-between;
+    width: 80%;
+    color: #77948F;
+    font-weight: bold;    
+    flex-wrap: wrap;    
+}
+
+.breadcrumb > * {
+    text-align: center;    
+    flex: 1 1 156px;
+}
+
+.breadcrumb__previous {
+    order: 1
+}
+
+.breadcrumb__blog {
+    order: 3;
+}
+
+.breadcrumb__next {
+    order: 2;
+}
+
+.breadcrumb__previous > a,
+.breadcrumb__previous > a:visited,
+.breadcrumb__next > a,
+.breadcrumb__next > a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ONLY FOR LESS THAN 100 WORDS */
+.ap-blog-post__short {
+    margin-top: 2rem;
+}
+
+
+@media screen and (min-width: 600px) {
+    .float-not-box {
+        display: none;
+    }
+
+    .kill-flex-width {
+        width: 80%;
+    }
+
+    .float-box {
+        display: inline;
+        float: right;
+        width: 35%;
+        margin: 1rem 0 1rem 2rem;
+    }
+
+    .breadcrumb > * {
+        flex: 1 1 150px;
+    }
+
+    .breadcrumb__next {
+        order: 3;
+    }
+
+    .breadcrumb__blog {
+        order: 2
+    }
+}

@@ -1,0 +1,50 @@
+
+setup https
+change featured image to custom field
+change dash menu order
+itn security checks
+shipping cost calculator
+make sanette wp account
+upon success and from notify update stock availability
+upon success and from notify update order status
+refactor transaction post creation
+edit details after submit
+    -add button to confirm-cart
+
+    #refactor payfast array generation
+    #work on cart and confirm cart layout
+    #contact page messaging format
+    #Contact message processing -- Verify on production server
+    #deploy
+    #remove debugging php
+    #phone validation
+    #favvicon
+    #Admin Bar Spacing
+    #create bot author
+    #confirmation and payfast
+    #proceed to checkout button
+    #add phone to client details and all cascading pages
+    #user and address save from cart
+    #Social links
+    #Biography, data, featured image and mini gallery
+    #Adjust Height of Singel galllery item view
+    #image alignment blogs
+    #illustration image alignment less than full width
+    #Single gallery center spacing
+    #Sold if price is 0
+    #Center image and content when text is little
+    #Fix Modal Image Size
+    #breadcrumb links
+    #404 -- Page not Found
+    #Shopping Cart
+    #cancel page
+    #return page
+    #success page
+    #order post type
+    #post_id
+    #name
+    #cart content
+    #total
+    #shipping
+    #pending
+    #client details

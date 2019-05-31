@@ -1,0 +1,5 @@
+/*Link text decoratone*/
+.link__plain, .link__plain:visited {
+    text-decoration: none;
+    color: inherit;
+}

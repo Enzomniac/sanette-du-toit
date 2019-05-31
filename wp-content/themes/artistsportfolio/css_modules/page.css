@@ -1,0 +1,53 @@
+/* page.php */
+
+.mypage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page__title {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin: 1.5rem 1rem 0.8rem;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.page__copy {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    line-height: 1.4rem;
+}
+
+.page__float-image {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .mypage {
+        width: 90%;
+        margin: auto;
+    }
+
+    .page__image {
+        display: none;
+    }
+
+    .page__float-image {
+        display: inline;
+        float: right;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .mypage {
+        width: 790px;
+    }
+
+    .page__float-image {
+        width: 35%;
+    }
+}
+

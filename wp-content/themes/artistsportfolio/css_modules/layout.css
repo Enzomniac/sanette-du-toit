@@ -1,0 +1,27 @@
+/*
+Proposed breakpoints:
+320px, 720px, 1024px
+*/
+
+body {
+    position: relative;
+    padding: 0.5rem;
+}
+
+main {
+    color: inherit;     
+}
+
+aside {
+    display: none;
+    background: lightgreen;
+}
+
+footer {
+    color: inherit;
+}
+
+.admin-bar header {
+    top: 2rem;
+}
+
