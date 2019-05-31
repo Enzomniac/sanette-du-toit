@@ -1,16 +1,16 @@
 
-setup https
-change featured image to custom field
-change dash menu order
-itn security checks
-shipping cost calculator
-make sanette wp account
 upon success and from notify update stock availability
 upon success and from notify update order status
 refactor transaction post creation
 edit details after submit
     -add button to confirm-cart
+change featured image to custom field
+itn security checks
+shipping cost calculator
 
+    #make sanette wp account
+    #change dash menu order
+    #setup https
     #refactor payfast array generation
     #work on cart and confirm cart layout
     #contact page messaging format

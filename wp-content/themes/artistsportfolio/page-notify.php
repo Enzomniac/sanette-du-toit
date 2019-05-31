@@ -4,7 +4,6 @@ header('HTTP/1.0 200 OK');
 
 $pfData = $_POST;
 
-
 date_default_timezone_set("Africa/Johannesburg");
 
 $confirmNotify = strval(date('H:i:s')) . '\n';
@@ -35,8 +34,6 @@ if ($signature != $pfData['signature']) {
     $confirmNotify .= "SIGNATURE MATCHED YIPEEEEEEEE";
 }
 
-
 wordwrap($confirmNotify, 70);
-
 
 mail('rhsupton@gmail.com', ('Payfast has sent ITN'), $confirmNotify);

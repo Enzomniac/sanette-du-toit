@@ -57,3 +57,20 @@ function generatepayfastArray($fromPost, $shippingCost) {
     $payfastArray['signature'] = md5($getString);   
     return $payfastArray;
 }
+
+// MENU ORDER
+
+function custom_menu_order($menu_ord) {
+    if (!$menu_ord) return true;
+    return array(
+     'index.php', // this represents the dashboard link
+     'edit.php?post_type=gallery-post',
+     'edit.php', // this is the default POST admin menu
+     'edit.php?post_type=page',
+     'edit.php?post_type=transaction-post' // this is a custom post type menu  
+
+     
+ );
+}
+add_filter('custom_menu_order', 'custom_menu_order');
+add_filter('menu_order', 'custom_menu_order');
