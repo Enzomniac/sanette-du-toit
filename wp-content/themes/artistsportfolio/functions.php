@@ -62,12 +62,13 @@ function generatepayfastArray($fromPost, $shippingCost) {
 
 function custom_menu_order($menu_ord) {
     if (!$menu_ord) return true;
-    return array(
-     'index.php', // this represents the dashboard link
-     'edit.php?post_type=gallery-post',
-     'edit.php', // this is the default POST admin menu
-     'edit.php?post_type=page',
-     'edit.php?post_type=transaction-post' // this is a custom post type menu  
+    return array(        
+        'edit.php?post_type=gallery-post',
+        'edit.php', // this is the default POST admin menu
+        'edit.php?post_type=page',
+        'edit.php?post_type=transaction-post', // this is a custom post type menu
+        'upload.php',
+        'index.php' // this represents the dashboard link
 
      
  );
