@@ -4,12 +4,7 @@ header('HTTP/1.0 200 OK');
 
 $pfData = $_POST;
 
-date_default_timezone_set("Africa/Johannesburg");
-
-$confirmNotify = strval(date('H:i:s')) . '\n';
-foreach($pfData as $key => $value) {
-    $confirmNotify .= $key . " : " . $value . ", ";
-}
+// Regen signature
 
 foreach($pfData as $key => $value) {
     if ($key != 'signature') {
@@ -28,12 +23,19 @@ if (!empty($passPhrase)) {
 
 $signature = md5($pfTempParamStr);
 
+// End regen signature
+
+// Compare Signature
+
 if ($signature != $pfData['signature']) {
-    $confirmNotify .= "SIGNATURE IS NOT A MATCH";
+    mail('rhsupton@gmail.com', "Payfast Error", "Payfast has sent an ITN, but the signatures dont match");
 } else {
-    $confirmNotify .= "SIGNATURE MATCHED YIPEEEEEEEE";
+    date_default_timezone_set("Africa/Johannesburg");
+    $confirmNotify = strval(date('H:i:s')) . '\n';
+    foreach($pfData as $key => $value) {
+        $confirmNotify .= $key . " : " . $value . "\r\n";
+    }
+    wordwrap($confirmNotify, 70);
+    mail('rhsupton@gmail.com', ('Payfast has sent ITN'), $confirmNotify);
 }
 
-wordwrap($confirmNotify, 70);
-
-mail('rhsupton@gmail.com', ('Payfast has sent ITN'), $confirmNotify);
