@@ -6,11 +6,17 @@ $shippingCost = 600;
 $payfastArray = generatePayfastArray($_POST, $shippingCost);
 
 // Change out of sandbox for production
-$pfHost = 'https://sandbox.payfast.co.za/eng/process';
+$testingServer = true;
 
-//Create transaction post
+if ($testingServer == false) {
+    $pfHost = 'https://sandbox.payfast.co.za/eng/process';
+} else {
+    $pfHost = 'https://www.payfast.co.za/eng/process';
+}
 
-$my_post = [
+//Create transaction post on click from "PROCEED TO CHECKOUT"
+
+$newTransaction = [
     'post_type' => 'transaction-post',
     'post_title' => "Transaction no.",
     'post_content' => "",
@@ -18,7 +24,7 @@ $my_post = [
     'post_author' => 2,
 ];
 
-$transactionID = wp_insert_post($my_post, true);
+$transactionID = wp_insert_post($newTransaction, true);
 
 //Insert order details into post($transactionID)
 
@@ -48,6 +54,11 @@ update_field('item_cost', $_POST['itemPrice'], $transactionID);
 update_field('shipping_cost', $shippingCost, $transactionID); 
 update_field('total_cost', ($shippingCost + $_POST['itemPrice']), $transactionID);
 update_field('order_status', 'pending', $transactionID);
+
+// UPDATE STOCK
+update_field('price', 0, $_POST['itemID']);
+
+
 ?>
     <main>        
         <div class="confirmation">
