@@ -1,7 +1,7 @@
 <?php
 get_header();
 
-$shippingCost = 600;
+$shippingCost = 5;
 
 $payfastArray = generatePayfastArray($_POST, $shippingCost);
 
