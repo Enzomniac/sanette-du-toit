@@ -27,10 +27,18 @@ function sendMessage($messageData) {
 }
 
 function generatepayfastArray($fromPost, $shippingCost) {
+    if (file_exists('local.php')) {
+        $merchantId = '10000100';
+        $merchantKey = '46f0cd694581a';
+    } else {
+        $merchantId = '10200325';
+        $merchantKey = 'cn3zlrtwjcg8z';
+    }
+
     $payfastArray = array(
         //change merchant id and key for production server
-        'merchant_id' => '10200325',  // Testing ID: '10000100'  Live ID: '10200325'
-        'merchant_key' => 'cn3zlrtwjcg8z',  // Testing Key: '46f0cd694581a' Live Key: 'cn3zlrtwjcg8z'
+        'merchant_id' => $merchantId,  // Testing ID: '10000100'  Live ID: '10200325'
+        'merchant_key' => $merchantKey,  // Testing Key: '46f0cd694581a' Live Key: 'cn3zlrtwjcg8z'
         'return_url' => 'https://www.sanette.expressiveart.co.za/cart/success',
         'cancel_url' => 'https://www.sanette.expressiveart.co.za/cart/no-success',
         'notify_url' => 'https://www.sanette.expressiveart.co.za/cart/notify',
@@ -72,4 +80,14 @@ function custom_menu_order($menu_ord) {
 }
 add_filter('custom_menu_order', 'custom_menu_order');
 add_filter('menu_order', 'custom_menu_order');
+
+// Notify client of successful parchase
+function notifyClient($clientMail, $itemName, $transactionID) {
+    $subjectLine = "Your purchase was successful";
+    $message = "Your purchase of " . $itemName . " was successful. \r\n";
+    $message .= "Reference number for the transaction is :" . $transactionID . " \r\n";
+    $message .= "Further communication will be via phone and email";
+    $message = wordwrap($message, 70);
+    mail($clientMail, $subjectLine, $message);
+}
 

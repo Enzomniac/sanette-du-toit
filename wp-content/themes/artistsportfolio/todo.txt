@@ -1,24 +1,26 @@
+add content
+  --POSTS
+  --GALLERY ITEMS
+send confirmation email to client
+Secure Passwords
 
-
-
-
-
-
-Remove "Payfast function has been called"
-insert merchant ID and Key
-upon success and from notify update order status
 
 -- AFTER MVP
+Work on Mobile Layout
 refactor transaction post creation
 edit details after submit
     -add button to confirm-cart
 change featured image to custom field
 itn security checks
 shipping cost calculator
+upon success and from notify update order status
+gift post type
 
 
 
 -- DONE
+    #insert merchant ID and Key
+    #Remove "Payfast function has been called"
     #find out of sandbox payfast host address www.payfast.co.za
     #make sanette wp account
     #change dash menu order

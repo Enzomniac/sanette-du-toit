@@ -39,3 +39,7 @@ if ($signature != $pfData['signature']) {
     mail('rhsupton@gmail.com', ('Payfast has sent ITN'), $confirmNotify);
 }
 
+notifyClient($pfData['email_address'], $pfData['item_name'], $pfData['m_payment_id']);
+
+
+

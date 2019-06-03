@@ -8,7 +8,7 @@ $payfastArray = generatePayfastArray($_POST, $shippingCost);
 // Change out of sandbox for production
 $testingServer = true;
 
-if ($testingServer == false) {
+if (file_exists('local.php')) {
     $pfHost = 'https://sandbox.payfast.co.za/eng/process';
 } else {
     $pfHost = 'https://www.payfast.co.za/eng/process';
@@ -60,7 +60,7 @@ update_field('price', 0, $_POST['itemID']);
 
 
 ?>
-    <main>        
+    <main>
         <div class="confirmation">
             <div class="client__details">
                 <div class="a-detail">
