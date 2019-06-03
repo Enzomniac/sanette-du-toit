@@ -4,7 +4,7 @@
 
 
 
-
+Remove "Payfast function has been called"
 insert merchant ID and Key
 upon success and from notify update order status
 

@@ -27,7 +27,6 @@ function sendMessage($messageData) {
 }
 
 function generatepayfastArray($fromPost, $shippingCost) {
-    echo ("The payfast() function has been called");
     $payfastArray = array(
         //change merchant id and key for production server
         'merchant_id' => '10200325',  // Testing ID: '10000100'  Live ID: '10200325'
