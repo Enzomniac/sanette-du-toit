@@ -4,7 +4,6 @@ add content
 send confirmation email to client
 Secure Passwords
 
-
 -- AFTER MVP
 Work on Mobile Layout
 refactor transaction post creation
@@ -15,8 +14,6 @@ itn security checks
 shipping cost calculator
 upon success and from notify update order status
 gift post type
-
-
 
 -- DONE
     #insert merchant ID and Key

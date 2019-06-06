@@ -1,4 +1,11 @@
-
+@media screen and (max-width: 390px) {
+    .logo__title {
+        
+        text-align: center;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+}
 
 header {
     position: fixed;
