@@ -2,7 +2,8 @@
 
 <?php
 $galleryPosts = new WP_Query(array(
-    'post_type' => 'gallery-post'
+    'post_type' => 'gallery-post',
+    'paged' => get_query_var('paged', 1)
 ));
 ?>
     <main>
