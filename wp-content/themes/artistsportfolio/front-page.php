@@ -2,7 +2,6 @@
 
 <?php
 $galleryPosts = new WP_Query(array(
-    'posts_per-page' => '10',
     'post_type' => 'gallery-post'
 ));
 ?>
@@ -18,7 +17,15 @@ while ($galleryPosts -> have_posts()) {
 <?php
 } //END THE LOOP
 ?>   
+            
         </div>
+<?php
+$paginationArr = array(
+    'total' => $galleryPosts -> max_num_pages
+);
+?>
+        <div class="pagination"><?php echo paginate_links($paginationArr); ?> </div>
+        
     </main>
 <?php get_footer() ?>
 

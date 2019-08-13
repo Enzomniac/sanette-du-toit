@@ -19,6 +19,10 @@
     transition: transform 60s ease-in;       
 }
 
+.pagination {
+    text-align: center;
+}
+
 /* 600px */
 @media screen and (min-width: 600px) {
     .gallery {

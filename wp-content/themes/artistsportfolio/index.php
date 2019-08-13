@@ -17,7 +17,7 @@ while (have_posts()) {
                         <a href="<?php echo get_the_permalink(); ?>" class="link__read-more">. . . READ MORE</a>
                     </div>
                 </div>
-                <div class="ap-blog-post__img-box">
+                <div class="ap-blog-post__img-box"> 
                     <img class="ap-blog-post__image" src="<?php the_post_thumbnail_url(); ?>" alt="">
                 </div>
             </div>
