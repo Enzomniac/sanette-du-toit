@@ -2,8 +2,9 @@
 
 <?php
 $galleryPosts = new WP_Query(array(
-    'post_type' => 'gallery-post',
-    'paged' => get_query_var('paged', 1)
+    'paged' => get_query_var('page', 1),
+    'post_type' => 'gallery-post',   
+    'has-archive' => true
 ));
 ?>
     <main>
@@ -18,15 +19,19 @@ while ($galleryPosts -> have_posts()) {
 <?php
 } //END THE LOOP
 ?>   
-            
         </div>
+        <div class="page_pag">
+               
 <?php
-$paginationArr = array(
-    'total' => $galleryPosts -> max_num_pages
-);
+$total_pages = $galleryPosts->max_num_pages;
+$current_page = max(1, get_query_var('page'));
+echo paginate_links(array(
+    'total' => $galleryPosts -> max_num_pages,    
+    'current' => $current_page,
+));    
 ?>
-        <div class="pagination"><?php echo paginate_links($paginationArr); ?> </div>
-        
+        </div>
+     
     </main>
 <?php get_footer() ?>
 
