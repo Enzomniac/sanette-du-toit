@@ -18,6 +18,24 @@ function portfolio_post_types() {
             'title', 'thumbnail'
         )
     ));
+    register_post_type('gift-post', array(
+        'public' => true,
+        'labels' => array(
+            'name' => 'Gifts',
+            'add_new_item' => "Add New Gift",
+            'edit_item' => 'Edit Gift',
+            'all_items' => 'All Gifts',
+            'singular_name' => 'Gift'
+        ),
+        'menu_icon' => 'dashicons-editor-contract',
+        'has_archive' => true,
+        'rewrite' => array(
+            'slug' => 'gift'
+        ),
+        'supports' => array(
+            'title', 'thumbnail'
+        )
+    ));
     register_post_type('transaction-post', array(
         'public' => true,
         'labels' => array(

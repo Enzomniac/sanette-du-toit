@@ -21,6 +21,7 @@
         <nav>            
             <a href="<?php echo(site_url()); ?>" class="nav__item">GALLERY</a>
             <a href="<?php echo(site_url('/blog')); ?>" class="nav__item">BLOG</a>
+            <a href="<?php echo(site_url('/blog')); ?>" class="nav__item">GIFTS</a>
             <a href="<?php echo(site_url('/biography')); ?>" class="nav__item">BIOGRAPHY</a>
             <a href="<?php echo(site_url('/contact')); ?>" class="nav__item">CONTACT</a>           
         </nav>

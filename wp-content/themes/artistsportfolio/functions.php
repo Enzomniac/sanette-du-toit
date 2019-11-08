@@ -11,7 +11,8 @@ add_action('wp_enqueue_scripts', 'basic_files');
 
 function features() {
     add_theme_support('title-tag');
-    add_theme_support('post-thumbnails');
+    add_theme_support('post-thumbnails');    
+    add_image_size('galleryThumbnail', 600, false);
 }
 
 add_action('after_setup_theme', 'features');
@@ -71,6 +72,7 @@ function custom_menu_order($menu_ord) {
     if (!$menu_ord) return true;
     return array(        
         'edit.php?post_type=gallery-post',
+        'edit.php?post_type=gift-post',
         'edit.php', // this is the default POST admin menu
         'edit.php?post_type=page',
         'edit.php?post_type=transaction-post', // this is a custom post type menu

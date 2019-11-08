@@ -102,7 +102,12 @@ nav {
     transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 800px) {
+
+
+@media screen and (min-width: 1180px) {
+    .nav__item + .nav__item {
+        margin-left: 2rem;
+    }
     .nav-toggle-label {
         display: none
     }
@@ -132,9 +137,7 @@ nav {
         margin-bottom: 0;  
     }
 
-    .nav__item + .nav__item {
-        margin-left: 1rem;
-    }
+
 
     .nav__item::after {
         content: "";
@@ -147,12 +150,6 @@ nav {
 
     .nav__item:hover::after {
         transform: scale(1, 1);
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .nav__item + .nav__item {
-        margin-left: 2rem;
     }
 }
 
