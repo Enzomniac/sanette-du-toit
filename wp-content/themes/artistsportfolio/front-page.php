@@ -14,7 +14,7 @@ while ($galleryPosts -> have_posts()) {
     $galleryPosts -> the_post();
 ?>
             <div class="gallery__item">
-                <a href="<?php the_permalink(); ?>" class="gallery__link"><img src="<?php echo the_post_thumbnail_url() ?>"  alt="" class="gallery__image"></a>
+                <a href="<?php the_permalink(); ?>" class="gallery__link"><img src="<?php echo the_post_thumbnail_url('galleryThumbnail') ?>"  alt="" class="gallery__image"></a>
             </div>
 <?php
 } //END THE LOOP
